@@ -59,7 +59,7 @@ const Home = () => {
     <div className='w-[1200px] h-full absolute right-0 bottom-0 '> 
 
     {/* Particles */}
-    {/* <ParticlesContainer/> */}
+    <ParticlesContainer/>
     {/* Avatar  Img*/}
     <motion.div
     variants={fadeIn('up',0.4)} 
