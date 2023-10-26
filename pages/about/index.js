@@ -56,12 +56,12 @@ const aboutData = [
     title: 'awards',
     info: [
       {
-        title: 'Webby Awards - Honoree',
-        stage: '2011 - 2012',
+        title: 'Google Attendee I/O - Badge',
+        stage: '2022 - 2023',
       },
       {
-        title: 'Adobe Design Achievement Awards - Finalist',
-        stage: '2009 - 2010',
+        title: 'Google Clould Innovator - Badge',
+        stage: '2021 - 2022',
       },
     ],
   },
@@ -69,16 +69,16 @@ const aboutData = [
     title: 'experience',
     info: [
       {
-        title: 'UX/UI Designer - XYZ Company',
-        stage: '2012 - 2023',
+        title: 'UX/UI Designer & Web Development - Div Marketing Solution Agency',
+        stage: '2022 - 2023',
       },
       {
-        title: 'Web Developer - ABC Agency',
-        stage: '2010 - 2012',
+        title: 'Front-End Development - Freelancer ',
+        stage: '2021 - 2023',
       },
       {
-        title: 'Intern - DEF Corporation',
-        stage: '2008 - 2010',
+        title: 'Intern - CIB Egypt',
+        stage: '2021 - 2022',
       },
     ],
   },
@@ -86,16 +86,16 @@ const aboutData = [
     title: 'credentials',
     info: [
       {
-        title: 'Web Development - ABC University, LA, CA',
-        stage: '2011',
+        title: 'Professional Front-End Web Development Nanodegree - Egfwd & Udacity',
+        stage: ' February 18,2022',
       },
       {
-        title: 'Computer Science Diploma - AV Technical Institute',
-        stage: '2009',
+        title: 'MIS - Alexandria University Bachelor degree',
+        stage: '2020 - 2023',
       },
       {
-        title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-        stage: '2006',
+        title: 'Certified IT Support - Google',
+        stage: 'February 8,2023',
       },
     ],
   },
@@ -161,7 +161,7 @@ const About = () => {
             <div className=' relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute
             after:top-0 after:right-0'>
               <div className='text-2xl xl:text-4xl font-extrabold mb-2 mx-5 text-amber-500'>
-                <CountUp start={0} end={3} duration={7}/> +
+                <CountUp start={0} end={3} duration={5}/> +
               </div>
               <div className=' text-xs mx-5 it uppercase tracking-[1px] leading-[1.4] max-w-[100px] '>
                 Years of experience
