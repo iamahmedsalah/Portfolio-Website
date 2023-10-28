@@ -1,5 +1,8 @@
 import '../styles/globals.css';
 
+// import the Head component 
+import Head from "next/head";
+
 
 
 // router
@@ -18,7 +21,12 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   return(
+
     <Layout>
+      {/* Add the favicon */}
+      <Head>
+        <link rel='favicon' href='/favicon.ico' />
+      </Head>
       <AnimatePresence mode='wait'>
           <motion.div key={router.route} className='h-full'>
             <Transition/>

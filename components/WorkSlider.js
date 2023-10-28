@@ -78,14 +78,13 @@ const WorkSlider = () => {
                     className='rounded-3xl w-auto h-auto '
                     />
                     {/* overlay */}
-                    <div className=' absolute inset-0 w-auto rounded-3xl  bg-gradient-to-l  ml-1 
-                    from-transparent via-[#f19524] to-[#d2d0bf]
+                    <div className=' absolute inset-0 w-auto rounded-3xl bg-primary/90
                     opacity-0 group-hover:opacity-50 transition-all duration-300'></div>
                     </a>
                     {/* title */}
                     <div className=' absolute bottom-0 translate-y-full 
                     group-hover:-translate-y-10 group-hover:xl:-translate-y-[140px] transition-all duration-300  text-[30px] font-mono '>
-                      <div className=' flex items-center delay-100'>
+                      <div className=' flex items-center delay-100 text-amber-500'>
                       {image.title}
                       </div>
                     </div>
