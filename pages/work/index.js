@@ -34,8 +34,9 @@ const Work = () => {
             animate='show'
             exit='hidden'
             className='mb-4 max-w-[400px] mx-auto lg:text-center'>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
-              odio. Quisque volutpat mattis eros. Nullam malesuada erat ut.
+              Front end developer duties include determining the structure and design of web pages, 
+              striking a balance between functional and aesthetic design,and ensuring web design is optimized for smartphones..
+              There is some of my projects and duties.
             </motion.p>
           </div>
           <motion.div 
