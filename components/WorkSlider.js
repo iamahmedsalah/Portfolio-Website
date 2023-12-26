@@ -2,8 +2,8 @@
 import Img from 'next/image'
 
 import { SiMongodb, SiHtml5, SiBootstrap, SiExpress, SiCss3, SiJavascript, SiNodedotjs ,SiFreelancer } from 'react-icons/si'
-import { TbApi } from 'react-icons/tb'
-
+import { TbApi , TbBrandNextjs , TbBrandFramerMotion} from 'react-icons/tb'
+import { SiTailwindcss } from "react-icons/si";
 // data
 const workSlides = {
   slides: [
@@ -20,12 +20,42 @@ const workSlides = {
             <SiMongodb key='' />,
             <SiExpress key='' />,
           ],
-          path: '/thumb1.png',
+          path: '/graduation-project.png',
           url: 'https://toy-toon.onrender.com/',
           note: 'Note: This project first access may take a while due to the server is sleeping',
         }
       ],
     },
+    {
+      images: [
+        {
+          title: 'Weatherly',
+          about: 'Weather simple website tracking my progress - Project fetch api',
+          tech: [
+            <SiJavascript key='' />,
+            <TbBrandNextjs key=''/>,
+            <SiTailwindcss  key='' />,
+            <TbBrandFramerMotion key='' />,
+            <TbApi key='' />,
+        ],
+          path: '/weatherly.png',
+          url: 'https://weatherly-five-pi.vercel.app/'
+        }
+      ],
+    },
+    {
+      images: [
+        {
+          title: 'Fhad Foil Factory',
+          about: 'First Freelance Work',
+          tech: [<SiFreelancer key='' />],
+          path: '/fahd-freelance.png',
+          url: 'https://www.fahdfoil.com/',
+          note:'Note: This project is low-code project, I used Odoo to build it'
+        }
+      ],
+    },
+    ,
     {
       images: [
         {
@@ -37,21 +67,8 @@ const workSlides = {
           <SiJavascript key='' />,
           <SiNodedotjs key='' />,
           <TbApi key='' />,],
-          path: '/thumb3.png',
+          path: '/egfwd-project.png',
           url: 'https://iamahmedsalah.github.io/Weather-Journal-App/'
-        }
-      ],
-
-    },
-    {
-      images: [
-        {
-          title: 'Fhad Foil Factory',
-          about: 'First Freelance Work',
-          tech: [<SiFreelancer key='' />],
-          path: '/thumb2.png',
-          url: 'https://www.fahdfoil.com/',
-          note:'Note: This project is low-code project, I used Odoo to build it'
         }
       ],
     },
