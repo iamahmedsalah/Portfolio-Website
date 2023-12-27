@@ -19,7 +19,7 @@ const Header = () => {
           {/* logo */}
           <Link href={'/'}>
             <Img 
-            className='w-auto h-auto'
+            className='w-auto h-auto opacity-70 hover:opacity-100 transition-opacity duration-300'
             src={'/logo1.png'}
             width={260}
             height={28}

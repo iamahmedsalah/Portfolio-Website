@@ -26,6 +26,7 @@ function MyApp({ Component, pageProps }) {
       {/* Add the favicon */}
       <Head>
         <link rel='favicon' href='/favicon.ico' />
+        <meta name="theme-color" content="#2e2257" />
       </Head>
       <AnimatePresence mode='wait'>
           <motion.div key={router.route} className='h-full'>

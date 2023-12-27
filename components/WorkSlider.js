@@ -13,12 +13,12 @@ const workSlides = {
           title: 'Toy Toon E-Commerce',
           about: 'ISC Gradution Project',
           tech: [
-            <SiHtml5 key='' />,
-            <SiCss3 key='' />,
-            <SiJavascript key='' />,
-            <SiBootstrap key='' />,
-            <SiMongodb key='' />,
-            <SiExpress key='' />,
+            <SiHtml5 key='1' />,
+            <SiCss3 key='2' />,
+            <SiJavascript key='3' />,
+            <SiBootstrap key='4' />,
+            <SiMongodb key='5' />,
+            <SiExpress key='6' />,
           ],
           path: '/graduation-project.png',
           url: 'https://toy-toon.onrender.com/',
@@ -32,11 +32,11 @@ const workSlides = {
           title: 'Weatherly',
           about: 'Weather simple website tracking my progress - Project fetch api',
           tech: [
-            <SiJavascript key='' />,
-            <TbBrandNextjs key=''/>,
-            <SiTailwindcss  key='' />,
-            <TbBrandFramerMotion key='' />,
-            <TbApi key='' />,
+            <SiJavascript key='7' />,
+            <TbBrandNextjs key='8'/>,
+            <SiTailwindcss  key='9' />,
+            <TbBrandFramerMotion key='10' />,
+            <TbApi key='11' />,
         ],
           path: '/weatherly.png',
           url: 'https://weatherly-five-pi.vercel.app/'
@@ -48,7 +48,7 @@ const workSlides = {
         {
           title: 'Fhad Foil Factory',
           about: 'First Freelance Work',
-          tech: [<SiFreelancer key='' />],
+          tech: [<SiFreelancer key='12' />],
           path: '/fahd-freelance.png',
           url: 'https://www.fahdfoil.com/',
           note:'Note: This project is low-code project, I used Odoo to build it'
@@ -62,11 +62,11 @@ const workSlides = {
           title: 'Weather Journal App',
           about: 'Egfwd Project - Udacity nanodagree',
           tech: [
-          <SiHtml5 key='' />,
-          <SiCss3 key='' />,
-          <SiJavascript key='' />,
-          <SiNodedotjs key='' />,
-          <TbApi key='' />,],
+          <SiHtml5 key='13' />,
+          <SiCss3 key='14' />,
+          <SiJavascript key='15' />,
+          <SiNodedotjs key='16' />,
+          <TbApi key='17' />,],
           path: '/egfwd-project.png',
           url: 'https://iamahmedsalah.github.io/Weather-Journal-App/'
         }
@@ -112,6 +112,7 @@ const WorkSlider = () => {
                       width={685}
                       height={200}
                       alt=''
+                      key={index}
                       priority='true'
                       className='rounded-3xl w-auto h-auto '
                     />
@@ -121,13 +122,13 @@ const WorkSlider = () => {
                   </a>
                   {/* title */}
                   <div className=' absolute bottom-0 translate-y-full 
-                    group-hover:-translate-y-10 group-hover:xl:-translate-y-[140px] transition-all duration-300  text-[30px] font-mono '>
-                    <div className=' flex items-center justify-center  delay-100 text-amber-500'>
+                    group-hover:-translate-y-10 group-hover:xl:-translate-y-[140px] transition-all duration-300  xl:text-[30px] lg:text-[30px]'>
+                    <div className=' flex items-center justify-center  delay-100 text-amber-500 font-ubuntu font-semibold'>
                       {image.title}
                     </div>
                     <h1 className='flex items-center justify-center text-center space-x-[15px] space-2.5'> {image.tech}</h1>
-                    <h6 className='text-sm text-center mt-2  '>{image.about}</h6>
-                    <p className='text-sm text-center mt-2'>{image.note} </p>
+                    <h6 className='text-[20px] text-center mt-2  '>{image.about}</h6>
+                    <p className='text-[10px] text-center mt-2'>{image.note} </p>
                   </div>
                 </div>
               </div>

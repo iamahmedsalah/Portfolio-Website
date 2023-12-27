@@ -84,7 +84,7 @@ const ParticlesContainer = () => {
       shape:{
         type: 'image',
         image: {
-          src: 'https://www.pngall.com/wp-content/uploads/10/Binance-Coin-Crypto-Logo-PNG-Background.png',
+          src: '/Binance-Coin-Crypto.png',
           width: 100,
           height: 100,
         },
