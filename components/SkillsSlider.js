@@ -1,10 +1,5 @@
 // icons
 import {
-  RxCrop,
-  RxPencil2,
-  RxDesktop,
-  RxReader,
-  RxRocket,
   RxArrowTopRight,
 } from "react-icons/rx";
 
@@ -113,17 +108,17 @@ const SkillsSlider = () => {
       {
         skillsData.map((item, index)=>{
           return <SwiperSlide key={index}>
-            <div className="bg-amber-500/50 h-fit rounded-bl-3xl rounded-tr-3xl px-6 py-8 flex 
-            sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer  hover:bg-secondary/30 
+            <div className="bg-amber-500/50 h-fit rounded-bl-3xl rounded-tr-3xl px-6 py-8 flex flex-col items-center justify-center
+            max-sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer  hover:bg-secondary/30 max-sm:h-fit
             transition-all duration-300">
             {/* Icons */}  
             <div className="text-4xl text-amber-500 mb-4">{item.icon}</div>
              {/* title & desc */}
             <div className="mb-8">
-              <div className="mb-2 text-lg">{item.title} </div>
+              <div className="mb-2 text-lg max-sm:text-xs">{item.title} </div>
             </div>
             {/* arrow */}
-            <div className="text-3xl"><RxArrowTopRight className=" group-hover:rotate-45 group-hover:text-amber-500
+            <div className="text-3xl max-sm:text-xl max-sm:hidden"><RxArrowTopRight className=" group-hover:-rotate-45 group-hover:text-amber-500
             transition-all duration-300  "/></div>
             </div>
           </SwiperSlide>
