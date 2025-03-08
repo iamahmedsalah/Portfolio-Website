@@ -84,7 +84,6 @@ const Home = () => {
         </motion.p> 
         {/* project btn */}
         {/* <div className=' flex justify-center xl:hidden absloute '>
-          <ProjectsBtn />
         </div> */}
         <motion.div variants={fadeIn('down', 0.4)}
           initial='hidden'
@@ -107,7 +106,7 @@ const Home = () => {
         animate='show'
         exit='hidden'
         transition={{ duration: 1, ease: 'easeInOut' }}
-        className='  w-full  max-w-[737] max-h-[578] absolute -bottom-10 lg:bottom-44 lg:right-[25%]   '>
+        className='  w-full  max-w-[737] max-h-[578] absolute  lg:right-[-29%]   '>
         <Avatar />
       </motion.div>
     </div>
