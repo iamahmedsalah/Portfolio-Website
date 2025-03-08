@@ -83,8 +83,6 @@ const Home = () => {
           (HTML, CSS, JavaScript, Node.js, and React.js)
         </motion.p> 
         {/* project btn */}
-        {/* <div className=' flex justify-center xl:hidden absloute '>
-        </div> */}
         <motion.div variants={fadeIn('down', 0.4)}
           initial='hidden'
           animate='show'
@@ -106,7 +104,7 @@ const Home = () => {
         animate='show'
         exit='hidden'
         transition={{ duration: 1, ease: 'easeInOut' }}
-        className='  w-full  max-w-[737] max-h-[578] absolute  lg:right-[-29%]   '>
+        className='  w-full  max-w-[737] max-h-[578] absolute  xl:bottom-[30px] xl:right-[-29%]   '>
         <Avatar />
       </motion.div>
     </div>

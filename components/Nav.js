@@ -26,7 +26,7 @@ export const navData = [
   { id: 1, name: "Skills", path: "/skills", icon: <FcServices/> },
   { id: 2, name: "Projects", path: "/projects", icon: <FcWorkflow  /> },
   { id: 3, path: "/", icon: <Image priority={true}  className="animate-spin" src={Logo} alt="logo" width={50} height={50} /> },
-  { id: 4, name: "About", path: "/about", icon: <FcInfo className="w-10" /> },
+  { id: 4, name: "About", path: "/about", icon: <FcInfo  /> },
   { id: 5, name: "Contact", path: "/contact", icon: <FcContacts /> },
 ];
 
