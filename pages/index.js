@@ -16,7 +16,7 @@ import { fadeIn } from '../variants'
 
 // Animte text
 
-const spanText = '  Digital Reality '
+const spanText = 'UI & UX designs come to life. '
 
 const container = {
   hidden: {
@@ -48,12 +48,14 @@ const spanVariants = {
 
 
 
+
+
 const Home = () => {
-  return <div className=' bg-primary/60 h-full'>
-    {/* text */}
-    <div className=' w-full h-full bg-gradient-to-r from-primary/10 via-black/30
-    to-black/10'>
-      <div className=" text-center flex flex-col justify-center xl:pt-40 xl:text-left
+  
+  return <div className='h-full fixed w-full flex flex-col items-center justify-center '>
+    <div className='h-full w-full items-center justify-center '>
+      {/* text */}
+      <div className=" text-center flex flex-col justify-center xl:pt-7 xl:text-left
       h-full  container mx-auto">
         {/* title */}
         <motion.h1
@@ -61,9 +63,9 @@ const Home = () => {
           initial='hidden'
           animate='show'
           exit='hidden'
-          className='h1'> Transforming Ideas <br /> into
-          {spanText.split('').map((char, index) =>
-            <motion.span className='text-amber-500'
+          className='h2  xl:whitespace-pre-wrap'>Front End                              Developer <br />
+            {spanText.split('').map((char, index) =>
+            <motion.span className='text-amber-500 text-2xl '
               variants={spanVariants} key={index}>
               {char}
             </motion.span>)}
@@ -75,28 +77,27 @@ const Home = () => {
           initial='hidden'
           animate='show'
           exit='hidden'
-          className=' max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-5'>
-          In publishing and graphic design,placeholder text commonly used to
-          demonstrate the visual form of a document or a typeface without relying on meaningful content.
-        </motion.p>
+          className=' max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-5 xl:whitespace-pre' >
+          Recounting projects that employed a variety
+          <br />
+          (HTML, CSS, JavaScript, Node.js, and React.js)
+        </motion.p> 
         {/* project btn */}
-        <div className=' flex justify-center xl:hidden relative'>
+        {/* <div className=' flex justify-center xl:hidden absloute '>
           <ProjectsBtn />
-        </div>
+        </div> */}
         <motion.div variants={fadeIn('down', 0.4)}
           initial='hidden'
           animate='show'
           exit='hidden'
-          className=" hidden xl:flex">
+          className=" hidden xl:flex ">
           <ProjectsBtn />
         </motion.div>
       </div>
     </div>
     <div>
-      {/* image */}
     </div>
-    <div className='w-[1200px] h-full absolute right-0 bottom-0 '>
-
+    <div className='w-full h-full absolute  -z-50 '>
       {/* Particles */}
       <ParticlesContainer />
       {/* Avatar  Img*/}
@@ -106,12 +107,12 @@ const Home = () => {
         animate='show'
         exit='hidden'
         transition={{ duration: 1, ease: 'easeInOut' }}
-        className=' w-full h-full max-w-[737] max-h-[678] absolute -bottom-20
-    lg:bottom-0 lg:left-[35%]'>
+        className='  w-full  max-w-[737] max-h-[578] absolute -bottom-10 lg:bottom-44 lg:right-[25%]   '>
         <Avatar />
       </motion.div>
     </div>
   </div>;
 };
+
 
 export default Home;

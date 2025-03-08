@@ -14,7 +14,7 @@ import {fadeIn }from '../../variants';
 
 const Work = () => {
   return (
-    <div className="h-full bg-primary/30 py-36 flex items-center">
+    <div className="h-[80vh] py-36 flex items-center">
       <Circles />
       <div className=" container mx-auto">
         <div className=" flex flex-col xl:flex-row gap-x-8">
@@ -26,7 +26,7 @@ const Work = () => {
             animate='show'
             exit='hidden'
             className="h2 xl:mt-0">
-              My Work<span className="text-amber-500">.</span>
+              My <span className="text-amber-500">Project.</span>
             </motion.h2>
             <motion.p 
             variants={fadeIn('up', 0.4)}
@@ -35,8 +35,7 @@ const Work = () => {
             exit='hidden'
             className='mb-4 max-w-[400px] mx-auto lg:text-center'>
               Front end developer duties include determining the structure and design of web pages, 
-              striking a balance between functional and aesthetic design,and ensuring web design is optimized for smartphones..
-              There is some of my projects and duties.
+              some of my projects are listed in the next slider
             </motion.p>
           </div>
           <motion.div 

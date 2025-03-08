@@ -5,53 +5,34 @@ import React, { useState } from 'react';
 
 
 
-// Icons
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaFigma,
-  FaNodeJs,
-} from "react-icons/fa";
-
-import {
-  SiNextdotjs,
-  SiFramer,
-  SiAdobephotoshop,
-  SiBootstrap,
-  SiExpress,
-  SiGithub,
-} from "react-icons/si";
-
 
 
 //  Data
 const aboutData = [
-  {
-    title: 'skills',
-    info: [
-      {
-        title: 'Web Development',
-        icons: [
-          <FaHtml5 key='' />,
-          <FaCss3 key='' />,
-          <FaJs key='' />,
-          <FaReact key='' />,
-          <SiBootstrap key=''/>,
-          <FaNodeJs key=''/>,
-          <SiExpress key=''/>,
-          <SiGithub key=''/>,
-          <SiNextdotjs key='' />,
-          <SiFramer  key=''/>,
-        ],
-      },
-      {
-        title: 'UI/UX Design',
-        icons: [<FaFigma key='' />, <SiAdobephotoshop key=''/>],
-      },
-    ],
-  },
+  // {
+  //   title: 'skills',
+  //   info: [
+  //     {
+  //       title: 'Web Development',
+  //       icons: [
+  //         <FaHtml5 key='' />,
+  //         <FaCss3 key='' />,
+  //         <FaJs key='' />,
+  //         <FaReact key='' />,
+  //         <SiBootstrap key=''/>,
+  //         <FaNodeJs key=''/>,
+  //         <SiExpress key=''/>,
+  //         <SiGithub key=''/>,
+  //         <SiNextdotjs key='' />,
+  //         <SiFramer  key=''/>,
+  //       ],
+  //     },
+  //     {
+  //       title: 'UI/UX Design',
+  //       icons: [<FaFigma key='' />, <SiAdobephotoshop key=''/>],
+  //     },
+  //   ],
+  // },
   {
     title: 'awards',
     info: [
@@ -69,10 +50,6 @@ const aboutData = [
     title: 'experience',
     info: [
       {
-        title: 'UX/UI Designer & Web Development - Div Marketing Solution Agency',
-        stage: '2022 - 2023',
-      },
-      {
         title: 'Front-End Development - Freelancer ',
         stage: '2021 - 2023',
       },
@@ -83,8 +60,16 @@ const aboutData = [
     ],
   },
   {
-    title: 'credentials',
+    title: 'certifications',
     info: [
+      {
+        title: 'IT Support - Google',
+        stage: 'February 5,2023',
+      },
+      {
+        title: 'Meta Front-End Developer - Meta',
+        stage: 'October 31,2023',
+      },
       {
         title: 'Professional Front-End Web Development Nanodegree - Egfwd & Udacity',
         stage: ' February 18,2022',
@@ -92,10 +77,6 @@ const aboutData = [
       {
         title: 'MIS - Alexandria University Bachelor degree',
         stage: '2020 - 2023',
-      },
-      {
-        title: 'Certified IT Support - Google',
-        stage: 'February 8,2023',
       },
     ],
   },
@@ -114,13 +95,24 @@ import {fadeIn} from '../../variants' ;
 
 // Counter
 import CountUp from 'react-countup'
+import Image from "next/image";
+
+// Download CV
+const DownloadCv = () => {
+  const link = document.createElement('a');
+  link.href = '/CV-Ahmed.pdf';
+  link.download = 'A-S-E CV.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
 
 const About = () => {
   const [index, setIndex] = useState(0);
   // console.log(index);
   return (
-  <div className=' h-full bg-primary/30 py-32 text-center xl:text-left'>
+  <div className=' h-full  py-32 text-center xl:text-left'>
     <Circle/>
     {/* Avatar image */}
     <motion.div 
@@ -134,7 +126,7 @@ const About = () => {
     <div className=' container mx-auto h-full flex flex-col items-center xl:flex-row
     gap-x-6  '>
       {/* text */}
-      <div className='flex-1 flex flex-col justify-center'>
+      <div className='flex-1 flex flex-col justify-center max-md:hidden'>
         <motion.h2 
         variants={fadeIn('right' ,0.2)}
         initial='hidden'
@@ -161,7 +153,7 @@ const About = () => {
             <div className=' relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute
             after:top-0 after:right-0'>
               <div className='text-2xl xl:text-4xl font-extrabold mb-2 mx-5 text-amber-500'>
-                <CountUp start={0} end={3} duration={5}/> +
+                <CountUp start={0} end={3} duration={4}/> +
               </div>
               <div className=' text-xs mx-5 it uppercase tracking-[1px] leading-[1.4] max-w-[100px] '>
                 Years of experience
@@ -170,13 +162,30 @@ const About = () => {
           </div>
           {/* project */}
           <div>
-            <div className=' relative flex-1after:w-[1px] after:h-full after:bg-white/10 after:absolute
+            <div className=' relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute
             after:top-0 after:right-0'>
               <div className='text-2xl xl:text-4xl font-extrabold mb-2 mx-5 text-amber-500'>
-                <CountUp start={0} end={10} duration={5}/> +
+                <CountUp start={0} end={7} duration={4}/> +
               </div>
               <div className=' text-xs mx-5 uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
                 Finshed Project
+              </div>
+            </div>
+          </div>
+           {/* CV */}
+           <div>
+            <div className=' relative flex-1after:w-[1px] after:h-full after:bg-white/10 after:absolute
+            after:top-0 after:right-0'>
+              <motion.button className='text-2xl xl:text-4xl font-extrabold mb-2 mx-5 text-amber-500'
+                      onClick={DownloadCv}
+                      whileHover={{
+                        scale: 1.3,
+                        transition: { duration: 0.2 },
+                      }}>
+                <Image src='/CvIcon.png' alt='cv' width={50} height={40}/>
+              </motion.button>
+              <div className=' text-xl mx-7 uppercase tracking-[1px] leading-[1.4]'> 
+                 CV
               </div>
             </div>
           </div>
