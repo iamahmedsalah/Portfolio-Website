@@ -24,3 +24,44 @@ export const fadeIn = (direction, delay) => {
     },
   };
 };
+
+export const staggerContainer = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      duration: 0.3,
+      ease: 'easeInOut',
+    },
+  },
+}
+export const containerRef = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      ease: 'easeIn',
+      staggerChildren: 0.2,
+      staggerDirection:2,
+    },
+  },
+}
+
+
+export const container = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      ease: 'easeInOut',
+      staggerChildren: 0.2,
+      staggerDirection:1,
+    },
+  },
+}

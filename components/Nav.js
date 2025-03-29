@@ -21,11 +21,14 @@ import Image from "next/image";
 import Logo from "../public/Binance-Coin-Crypto.png";
 
 import {motion} from 'framer-motion';
+import {staggerContainer , containerRef} from '../variants'
+
+
 // nav data
 export const navData = [
   { id: 1, name: "Skills", path: "/skills", icon: <FcServices/> },
   { id: 2, name: "Projects", path: "/projects", icon: <FcWorkflow  /> },
-  { id: 3, path: "/", icon: <Image priority={true}  className="animate-spin" src={Logo} alt="logo" width={50} height={50} /> },
+  { id: 3, path: "/", icon: <Image priority={true}  className="animate-spin-slow" src={Logo} alt="logo" width={50} height={50} /> },
   { id: 4, name: "About", path: "/about", icon: <FcInfo  /> },
   { id: 5, name: "Contact", path: "/contact", icon: <FcContacts /> },
 ];
@@ -39,14 +42,20 @@ const Nav = () => {
   const router = useRouter();
   const pathname = router.pathname
   return (
-    <nav>
+    <motion.nav           
+    variants={containerRef}
+    initial="hidden"
+    animate="show"
+    className="">
     {/* nav link */}
-    <ul
+    <motion.ul
+              
       className="flex justify-center items-center w-fit mx-auto gap-16 mt-5 z-50 bg-secondary/30  shadow-2xl outline outline-amber-600 
-      p-2.5 px-10 rounded-full max-sm:rounded-none max-lg:mt-0  max-sm:gap-[30px] "
+      p-2.5 px-10 rounded-full max-lg:rounded-none max-lg:w-full max-lg:mt-0  max-sm:gap-[30px] "
     >
       {navData.map((link, index) => (
         <motion.li
+          variants={staggerContainer}
           whileHover={{
             scale: 1.3,
             transition: { duration: 0.2 },
@@ -65,7 +74,7 @@ const Nav = () => {
           </Link>
         </motion.li>
       ))}
-    </ul>
+    </motion.ul>
     {/* CV Link */}
     {/* <div className="absolute top-[27px] ml-30 max-md:hidden">
       <motion.button
@@ -79,7 +88,7 @@ const Nav = () => {
         <Image src={CvIcon} alt="cv-icon" width={20} height={20} />
       </motion.button>
     </div> */}
-  </nav>
+  </motion.nav>
   )
 };
 

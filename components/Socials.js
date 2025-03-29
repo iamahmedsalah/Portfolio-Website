@@ -6,45 +6,25 @@ import { TbBrandHackerrank } from "react-icons/tb";
 import { FiLinkedin, FiGithub, FiFacebook } from "react-icons/fi";
 
 import {motion} from 'framer-motion';
-
-const firVaraints = {
-  hidden: {
-    opacity: 0,
-  },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const secVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  show: {
-    opacity: 1,
-  },
-};
+import {  staggerContainer ,container } from '../variants';
 
 const Socials = () => {
   return (
     <motion.div className="relative  flex items-center gap-x-5 text-lg  dark:text-gray-50 z-50">  
       <div
-        className="flex flex-col items-center xl:justify-center gap-y-4 fixed h-max 
+        className="flex flex-col items-center xl:justify-center gap-y-4 fixed h-16
   bottom-0 mt-auto  xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen "
       >
         {/* inner */}
         <motion.div
-          variants={firVaraints}
+          variants={container}
           initial="hidden"
           animate="show"
           className="flex items-center  w-full xl:flex-col  justify-between xl:justfiy-center gap-y-10 px-4 bg-secondary/30  shadow-2xl outline outline-amber-600 
             md:px-40 xl:px-0 h-[80px] xl:h-max py-8  text-3xl xl:text-xl xl:rounded-full "
         >
           <motion.ul className="flex items-center gap-x-5 xl:flex-col xl:gap-y-5">
-            <motion.li variants={secVariants}>
+            <motion.li variants={staggerContainer}>
               {" "}
               <Link
                 href={"https://www.facebook.com/iamahmedsoliman/"}
@@ -53,7 +33,7 @@ const Socials = () => {
                 <FiFacebook  className="hover:scale-125 duration-200" />
               </Link>
             </motion.li>
-            <motion.li variants={secVariants}>
+            <motion.li variants={staggerContainer}>
               {" "}
               <Link
                 href={""}
@@ -62,7 +42,7 @@ const Socials = () => {
                 <RiInstagramLine  className="hover:scale-125 duration-200" />
               </Link>
             </motion.li>
-            <motion.li variants={secVariants}>
+            <motion.li variants={staggerContainer}>
               <Link
                 href={""}
                 className="w-5 text-2xl hover:text-green-700 "
@@ -70,7 +50,7 @@ const Socials = () => {
                 <TbBrandHackerrank  className="hover:scale-125 duration-200" />
               </Link>
             </motion.li>
-            <motion.li variants={secVariants}>
+            <motion.li variants={staggerContainer}>
               {" "}
               <Link
                 href={"https://github.com/iamahmedsalah"}
@@ -79,7 +59,7 @@ const Socials = () => {
                 <FiGithub className="hover:scale-125 duration-200" />
               </Link>
             </motion.li>
-            <motion.li variants={secVariants}>
+            <motion.li variants={staggerContainer}>
               {" "}
               <Link
                 href={"https://www.linkedin.com/in/iamahmedsoliman/"}

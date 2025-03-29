@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }) {
         <link rel='favicon' href='/favicon.ico' />
         <meta name="theme-color" content="#731e1c" />
         <title>{metadata.title}</title>
-        <meta name="theme-color" content="" />
+        <meta name="theme-color" content="#731e1c" />
         <meta name="description" content={metadata.description} />
         <meta property="og:type" content={metadata.type} />
         <meta property="og:site_name" content={metadata.siteName} />

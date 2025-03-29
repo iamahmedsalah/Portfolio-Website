@@ -3,63 +3,42 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FcBrokenLink } from "react-icons/fc";
 
-
+import {  staggerContainer ,container } from '../variants'
 
 
 const text = '404'
 
-const firVaraints = {
-    hidden:{
-        opacity:0,
-    },
-    show:{
-        opacity:1,
-        transition:{
-            staggerChildren:0.1,
-        },
-    },
-}
-
-const secVariants = {
-    hidden:{
-        opacity:0,
-    },
-    show:{
-        opacity:1,
-    },
-}
-
 const notFound = () => {
   return (
     <motion.section
-      variants={firVaraints}
+      variants={container}
       initial="hidden"
       animate="show"
-      className=" dark:bg-gray-900"
+      
     >
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div className="mx-auto max-w-screen-sm text-center">
           <motion.h1 className="mb-4 text-7xl tracking-tight font-extrabold lg:text-9xl text-primary-600 dark:text-primary-500">
             {text.split("").map((char, index) => (
-              <motion.span variants={secVariants} key={index}>
+              <motion.span variants={staggerContainer} key={index}>
                 {char}
               </motion.span>
             ))}
           </motion.h1>
           <motion.p
-            variants={secVariants}
+            variants={staggerContainer}
             className="mb-4 text-3xl tracking-tight font-bold  md:text-4xl "
           >
             Page is missing.
           </motion.p>
           <motion.p
-            variants={secVariants}
+            variants={staggerContainer}
             className="mb-4 text-lg font-light dark:text-gray-400"
           >
             Sorry, we can&apos;t find that page. You&apos;ll find lots to
             explore on the home page.
           </motion.p>
-          <motion.button variants={secVariants} onClick={()=> {window.history.back()}}
+          <motion.button variants={staggerContainer} onClick={()=> {window.history.back()}}
           className="bg-secondary/30  shadow-2xl outline outline-amber-600 text-center w-48 rounded-2xl h-14 relative  text-xl font-semibold group"
           type="button" 
         >
