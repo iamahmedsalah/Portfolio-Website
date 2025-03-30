@@ -66,7 +66,7 @@ const skillsData = [
   },
   {
     icon: <SiGithub />,
-    title: 'Git Hub',
+    title: 'GitHub',
     description: 'Github is a web-based platform used for version control.',
   },
   {
@@ -83,8 +83,7 @@ const skillsData = [
   
   
 ];
-// Conponents
-import SkillsSlider from '../../components/SkillsSlider';
+// Conponents;
 import Bulb from '../../components/Bulb';
 import Circles from '../../components/Circles';
 
@@ -97,12 +96,12 @@ import { fadeIn , staggerContainer  , containerRef ,container } from '../../vari
 
 const Skills = () => {
   return (
-    <div className="h-[vh] py-36 flex items-center">
+    <div className="py-10 flex items-center">
       <Circles />
       <div className=" container mx-auto">
         <div className=" flex flex-col xl:flex-row gap-x-8">
           {/* text */}
-          <div className='text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0'>
+          <div className='text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0 '>
             <motion.h2
               variants={fadeIn('up', 0.2)}
               initial='hidden'
@@ -120,14 +119,14 @@ const Skills = () => {
               Front-end Skills refer to the visual and interactive aspects of a website or app that users directly engage with.
             </motion.p>
           </div>
-          <motion.div className='grid grid-cols-4 grid-rows-4 gap-4 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8'
+          <motion.div className='grid grid-cols-4 grid-rows-4 gap-4 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8 max-md:text-xs'
           variants={containerRef}
           initial='hidden'
           animate='show'
           exit='hidden'>
           {skillsData.map((item, index)=>{
             return(
-            <motion.div key={index} className="bg-amber-500/50 h-fit rounded-xl flex justify-center p-6"
+            <motion.div key={index} className="bg-amber-500/50 h-fit rounded-xl flex flex-col justify-center items-center p-4"
             whileHover={{ scale: 1.25,
               color: '#000',
               backgroundColor: '#fff',}}
@@ -135,9 +134,9 @@ const Skills = () => {
             transition={{ duration: 0.3 }}>
               
              {/* Icons */}  
-            <div className="text-3xl text-amber-500 flex items-center">{item.icon}</div>
+            <div className="text-3xl text-amber-500 flex items-center max-md:text-xs">{item.icon}</div>
              {/* title & desc */}
-            <div className="flex px-2 justify-center ">
+            <div className="flex justify-center ">
               <div className="">{item.title} </div>
             </div>
             </motion.div>
@@ -146,7 +145,7 @@ const Skills = () => {
             }
           </motion.div>
         </div>
-        <Bulb />
+        <Bulb/>
       </div>
     </div>
   );

@@ -112,15 +112,16 @@ const About = () => {
   const [index, setIndex] = useState(0);
   // console.log(index);
   return (
-  <div className=' h-screen  py-32 text-center xl:text-left'>
+  <div className=' h-screen  py-16 text-center xl:text-left'>
     <Circle/>
+
     {/* Avatar image */}
     <motion.div 
     variants={fadeIn('right' ,0.2)}
     initial='hidden'
     animate='show'
     exit='hidden'
-    className=' hidden xl:flex absolute bottom-0 -left-[370px]'>
+    className='xl:flex absolute bottom-0 -left-[370px] -z-10'>
       <Avatar/>
     </motion.div>
     <div className=' container mx-auto  flex flex-col items-center xl:flex-row

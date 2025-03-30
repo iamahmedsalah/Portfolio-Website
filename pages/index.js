@@ -7,7 +7,7 @@ import ParticlesContainer from '../components/ParticlesContainer';
 import ProjectsBtn from '../components/ProjectsBtn';
 import SkillsBtn from '../components/SkiilsBtn';
 import Avatar from '../components/Avatar';
-
+import Header from '../components/Header';
 
 // Framer motion
 import { motion } from 'framer-motion'
@@ -23,7 +23,10 @@ const rightText= ' Developer '
 const Home = () => {
   
   return <div className='h-full fixed w-full flex flex-row items-center justify-center '>
-    <div className='grid grid-cols-2 grid-rows-1 gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-x-[450px] max-lg:hidden'>
+    <div className='invisible max-xl:visible flex flex-col items-center justify-center '>
+      <Header />
+    </div>
+    <div className='grid grid-cols-2 grid-rows-1 gap-2 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-x-[450px] max-xl:hidden'>
       {/* container left */}
       <div className=" text-center flex flex-col justify-center ml-20 xl:pt-7 xl:text-left
       h-full  container mx-auto">
@@ -109,7 +112,7 @@ const Home = () => {
         animate='show'
         exit='hidden'
         transition={{ duration: 1, ease: 'easeInOut' }}
-        className='  w-full  max-w-[737] max-h-[578] absolute  xl:bottom-[30px] xl:right-[-29%]   '>
+        className='w-full  max-w-[737] max-h-[578] absolute  xl:bottom-[30px] xl:right-[-26%] max-xl:bottom-[40px] max-xl:right-[-13%]  -z-10 max-lg:hidden'>
         <Avatar />
       </motion.div>
     </div>

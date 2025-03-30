@@ -101,7 +101,7 @@ const WorkSlider = () => {
                     className=" relative rounded-lg overflow-hidden flex items-center justify-center group "
                     key={index}
                   >
-                    <div className="flex justify-center">
+                    <div className="flex justify-center ">
                       {/* images */}
                       <Link href={image.url} target="_blank">
                         <Img
@@ -115,25 +115,25 @@ const WorkSlider = () => {
                         />
                         {/* overlay */}
                         <div
-                          className=" absolute inset-0 w-auto rounded-3xl bg-amber-500/20
+                          className=" absolute inset-0 w-auto rounded-3xl bg-primary/50
                     opacity-0 group-hover:opacity-75 transition-all duration-300"
                         >
                           {/* title */}
                           <div
                             className="absolute inset-0 flex flex-col items-center justify-center
-                          text-white transition-all duration-300"
+                          bg-primary/50 transition-all duration-300 rounded-3xl"
                           >
-                            <div className=" flex items-center justify-center  delay-100 text-amber-500 font-ubuntu font-semibold">
+                            <div className=" flex items-center justify-center delay-100 text-amber-500 font-ubuntu font-semibold text-2xl">
                               {image.title}
                             </div>
-                            <h1 className="flex items-center justify-center text-center space-x-[15px] space-2.5">
+                            <h1 className="text-center py-1">
+                              {image.about}
+                            </h1>
+                            <h1 className="flex items-center justify-center text-center space-x-[15px] space-2.5  text-lg">
                               {" "}
                               {image.tech}
                             </h1>
-                            <h6 className="text-[20px] text-center mt-2  ">
-                              {image.about}
-                            </h6>
-                            <p className="text-[10px] text-center mt-2">
+                            <p className="text-xs text-center mt-2">
                               {image.note}{" "}
                             </p>
                           </div>

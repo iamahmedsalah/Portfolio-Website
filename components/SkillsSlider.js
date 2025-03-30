@@ -69,7 +69,7 @@ const skillsData = [
   },
   {
     icon: <SiGithub />,
-    title: 'Git Hub',
+    title: 'GitHub',
     description: 'Github is a web-based platform used for version control.',
   },
   {

@@ -27,12 +27,15 @@ const audiowideFont = Audiowide({
 import Nav from '../components/Nav';
 import Socials from '../components/Socials';
 import TopLeftImg from '../components/TopLeftImg';
+import Circles from '../components/Circles';
+
 
 const Layout = ({children}) => {
   return <div className={`page text-white bg-no-repeat ${audiowideFont.variable} font-audiowide`} >
     <Nav/>
     <Socials/>
     <TopLeftImg/>
+    <Circles/>
     {children}
     </div>
 };
