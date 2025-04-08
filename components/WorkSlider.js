@@ -8,10 +8,13 @@ import {
   SiCss3,
   SiJavascript,
   SiNodedotjs,
-  SiFreelancer,
+  SiVite,
+  SiTailwindcss,
+  SiDaisyui,
 } from "react-icons/si";
 import { TbApi, TbBrandNextjs, TbBrandFramerMotion } from "react-icons/tb";
-import { SiTailwindcss } from "react-icons/si";
+import { FaNodeJs } from "react-icons/fa";
+import { FaReact } from "react-icons/fa";
 // data
 const workSlides = {
   slides: [
@@ -49,6 +52,44 @@ const workSlides = {
           ],
           path: "/weatherly.png",
           url: "https://weatherly-five-pi.vercel.app/",
+        },
+      ],
+    },
+    {
+      images: [
+        {
+          title: "MERN-AUTH",
+          about:
+            "AUTH App a full MERN project for user authentication,authorization ",
+          tech: [
+            <FaReact key="7" />,
+            <SiVite key="8" />,
+            <SiTailwindcss key="9" />,
+            <TbBrandFramerMotion key="10" />,
+            <FaNodeJs key="12" />,
+            <TbApi key="11" />,
+          ],
+          path: "/auth-shot.png",
+          url: "https://auth-mern-gilt.vercel.app/login/",
+        },
+      ],
+    },
+    {
+      images: [
+        {
+          title: "Dashborad UI",
+          about:
+            "Front End Project for admin panel UI",
+          tech: [
+            <FaReact key="7" />,
+            <SiVite key="8" />,
+            <SiTailwindcss key="9" />,
+            <TbBrandFramerMotion key="10" />,
+            <SiDaisyui  key="12" />,
+            <TbApi key="11" />,
+          ],
+          path: "/dashborad-shot.png",
+          url: "https://dashborad-front-end.vercel.app/",
         },
       ],
     },
@@ -115,7 +156,7 @@ const WorkSlider = () => {
                         />
                         {/* overlay */}
                         <div
-                          className=" absolute inset-0 w-auto rounded-3xl bg-primary/50
+                          className=" absolute inset-0 w-auto rounded-3xl bg-primary/50 
                     opacity-0 group-hover:opacity-75 transition-all duration-300"
                         >
                           {/* title */}
